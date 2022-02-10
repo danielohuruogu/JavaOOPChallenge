@@ -20,7 +20,7 @@ public class PromoEngineTest {
 	@Test
 	public void testEngineSum(){
 
-		Integer sumValues = 160;
+		int sumValues = 160;
 		// want the engine to take a value and apply a promo to it
 		assertEquals(PromoEngine.returnSumValue(fakeItems),sumValues);
 	}
@@ -29,7 +29,7 @@ public class PromoEngineTest {
 	public void testEnginePromo(){
 
 		// promo rule: buy 3 Bs for 50
-		Integer promoSumValues = 120;
+		int promoSumValues = 120;
 		assertEquals(PromoEngine.applyFixedPromo(fakeItems),120);
 	}
 }
