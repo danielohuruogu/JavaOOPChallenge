@@ -10,4 +10,8 @@ public class Cart {
 			this.items.add(i);
 		}
 	}
+
+	public List getItems(){
+		return this.items;
+	}
 }

@@ -10,20 +10,26 @@ import java.util.Map;
 
 public class PromoEngineTest {
 
+	List<Item> fakeItems = List.of(
+			new Item("A", 20),
+			new Item("B", 30),
+			new Item("B", 30),
+			new Item("B", 30),
+			new Item("C", 50));
+
 	@Test
 	public void testEngineSum(){
 
-		Integer sumValues = 100;
+		Integer sumValues = 160;
 		// want the engine to take a value and apply a promo to it
-		assertEquals(PromoEngine.returnSumValue(List.of(
-				new Item("A", 20),
-				new Item("B", 30),
-				new Item("C", 50)
-		)),sumValues);
+		assertEquals(PromoEngine.returnSumValue(fakeItems),sumValues);
 	}
 
 	@Test
 	public void testEnginePromo(){
 
+		// promo rule: buy 3 Bs for 50
+		Integer promoSumValues = 120;
+		assertEquals(PromoEngine.applyFixedPromo(fakeItems),120);
 	}
 }
