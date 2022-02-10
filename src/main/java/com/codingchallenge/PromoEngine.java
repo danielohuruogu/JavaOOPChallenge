@@ -11,8 +11,7 @@ public class PromoEngine {
 		}
 		return sum;
 	}
-
-
+	
 	public static int applyFixedPromo(List<Item> itemsList) {
 		// fixed promo is 3 * B = 50
 		int BCount = 0;
@@ -25,10 +24,11 @@ public class PromoEngine {
 			}
 			sum += item.getPrice();
 		}
-		if (BCount % 3 == 0) {
-			sum -= 40;
-		}
+		// have to make sure that it can handle a lot of Bs coming through a list
+		// want to find the number of 3s occuring, so we can minus that many discounts off the total
+		int BMultiples = (int) Math.floor(BCount/3);
+		int totalDiscount = BMultiples * 40;
 
-		return sum;
+		return sum - totalDiscount;
 	}
 }

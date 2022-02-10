@@ -15,6 +15,9 @@ public class PromoEngineTest {
 			new Item("B", 30),
 			new Item("B", 30),
 			new Item("B", 30),
+			new Item("B", 30),
+			new Item("B", 30),
+			new Item("B", 30),
 			new Item("C", 50));
 
 	@Test
@@ -29,7 +32,7 @@ public class PromoEngineTest {
 	public void testEnginePromo(){
 
 		// promo rule: buy 3 Bs for 50
-		int promoSumValues = 120;
-		assertEquals(PromoEngine.applyFixedPromo(fakeItems),120);
+		int promoSumValues = 170;
+		assertEquals(PromoEngine.applyFixedPromo(fakeItems),promoSumValues);
 	}
 }
