@@ -9,10 +9,10 @@ public class Main {
 		Item B = new Item("B", 30);
 		Item C = new Item("C", 50);
 
-		List<Item> fakeItems = List.of(A,B,B,B,B,B,B,C,C);
+//		List<Item> fakeItems = List.of(A,B,B,B,B,B,B,C,C);
 
 		PromoEngine promo = new PromoEngine();
 
-		promo.applyMultipleItemPromo(fakeItems);
+//		promo.applyMultipleItemPromo(fakeItems);
 	}
 }
